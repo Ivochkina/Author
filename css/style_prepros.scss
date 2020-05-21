@@ -5,6 +5,7 @@
 @import "owl.carousel.min.css";
 @import "owl.theme.default.min.css";
 @import "animate.min.css";
+@import "hover.css";
 @import "style.css";
 
 $ff: 'Open Sans', sans-serif;
@@ -13,6 +14,7 @@ $ff_s: "Open Sans Semibold", sans-serif;
 $color_1: #ffffff;
 $color_2: #49cbcd;
 $color_3: #4e525d;
+
 @mixin max-screen($number) {
   @media screen and (max-width: $number) {
     @content;
@@ -33,6 +35,7 @@ header {
       margin-left: 15px;
     }
 
+
     &:hover:after, &.active:after {
       width: 100%;
     }
@@ -42,10 +45,14 @@ header {
       height: 100%;
       @include max-screen(767px) {
         &:hover {
-          width: 20%;
+          width: 25%;
+        }
+        &:hover:after, &.active:after {
+          display: none;
         }
       }
     }
+
   }
 
 
@@ -55,6 +62,21 @@ header {
     border: none;
     box-shadow: none;
 
+    .navbar-toggle {
+      border: none;
+
+      &:hover {
+        background-color: white;
+      }
+
+      .icon-bar {
+        background-color: $color_2;
+        width: 35px;
+        height: 4px;
+      }
+    }
+
+
     .navbar-nav > li > a {
 
       color: #545860;
@@ -63,6 +85,9 @@ header {
       font-family: $ff;
       height: 100%;
       margin: 30px 0;
+      @include max-screen(767px) {
+        margin: -5px 0;
+      }
 
     }
   }
@@ -127,13 +152,20 @@ li {
     font-size: 63px;
     color: $color_1;
     margin-bottom: 35px;
+    @include max-screen(767px) {
+      font-size: 40px;
+    }
   }
 
   h3 {
     font-family: "Open Sans Semibold", sans-serif;
     color: $color_1;
     margin-bottom: 63px;
+    font-size: 23px;
     line-height: 37px;
+    @include max-screen(767px) {
+      font-size: 25px;
+    }
   }
 
   .main-link {
@@ -147,6 +179,16 @@ li {
     padding: 20px 45px;
     border: 3px solid $color_1;
     border-radius: 4px;
+    @include max-screen(767px) {
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    &:hover {
+      border: 6px solid $color_1;
+
+    }
+
   }
 }
 
@@ -160,12 +202,14 @@ li {
     &:after {
       width: 50px;
       height: 50px;
-      content: url("../images/owl_r_05.png");
       color: $color_2;
       display: block;
       position: absolute;
       right: 0;
       top: 180px;
+      content: url("../images/owl_r_05.png");
+
+
     }
 
   }
@@ -223,140 +267,198 @@ li {
 }
 
 .team {
-  padding: 55px 0 70px;
+  padding: 105px 0 55px;
+  @include max-screen(991px){
+    padding: 50px 0;
+  }
+  @include max-screen(767px) {
+    padding: 15px 0;
+  }
+
+  p {
+    margin-bottom: 50px;
+  }
 
   h2 {
     font-family: $ff_r;
     font-size: 42px;
     color: #4e525d;
-    text-align: center;
     margin-bottom: 139px;
+    @include max-screen(991px){
+      margin-bottom: 80px;
+    }
+    @include max-screen(767px) {
+      font-size: 22px;
+      margin-bottom: 50px;
+    }
   }
 
-  .wrap {
+  h3 {
+    color: $color_3;
+    font-size: 22px;
+    font-family: $ff_r;
+
+    span {
+      display: block;
+      font-size: 14px;
+    }
+  }
+
+  .team_img {
     width: 201px;
     height: 201px;
     border-radius: 50%;
     background-color: #eeeef0;
-    margin: auto;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
 
-    a:after {
-      content: url("../images/plus_03.png");
+    img {
+      width: 100%;
       display: block;
+    }
+
+    &:after {
       position: absolute;
+      content: "+";
+      color: red;
+      font-size: 50px;
+      line-height: 201px;
+      width: 100%;
+      text-align: center;
       left: 0;
-      right: 0;
-      bottom: 0;
-      top: 17.5%;
+      top: 0;
       visibility: hidden;
+      transition: 0.5s;
+      display: block;
     }
 
-    &:hover > a:after {
-      visibility: visible;
-    }
-
-  }
-
-  .col-sm-6 {
-    text-align: center;
-  }
-
-  h4 {
-    margin-top: 75px;
-    margin-bottom: 10px;
-    font-family: $ff_r;
-    font-size: 22px;
-    color: $color_3;
-  }
-
-  h6 {
-    margin-bottom: 38px;
-    font-family: $ff-r;
-    font-size: 14px;
-    color: $color_3;
-  }
-
-  p {
-    font-family: $ff_r;
-    font-size: 14px;
-    color: $color_3;
-    margin-bottom: 30px;
-  }
-
-}
-
-.rate {
-  padding: 120px 0 70px;
-  background-color: #f1f1f1;
-  @include max-screen(767px) {
-    padding: 15px 0;
-  }
-
-  .col-sm-4 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  .name {
-    background-color: #485460;
-    padding: 30px 0;
-    font-size: 26px;
-    font-family: $ff_r;
-    color: $color_1;
-  }
-
-  .price {
-    padding: 22px 0;
-    background-color: #f8f9fb;
-    font-family: $ff_r;
-    font-size: 20px;
-    color: #485460;
-    border-left: solid 1px #ecf0f1;
-    border-right: solid 1px #ecf0f1;
-  }
-
-  .about {
-    padding: 20px 0;
-    background-color: $color_1;
-    font-family: $ff_r;
-    font-size: 14px;
-    color: #8c9299;
-    border: solid 1px #ecf0f1;
-  }
-
-  .link {
-    padding: 30px 0;
-    background-color: #f8f9fb;
-
-    a {
-      display: inline-block;
-      padding: 15px 50px;
-      font-family: $ff_s;
-      font-size: 17px;
-      color: $color_1;
-      background-color: #788492;
-      text-decoration: none;
-
-      &:hover {
-        background-color: $color_2;
+    &:hover {
+      &:after {
+        visibility: visible;
+        transform: rotate(180deg);
       }
     }
   }
 }
 
+
+.rate {
+  padding: 120px 0 70px;
+  background-color: #f1f1f1;
+  @include max-screen(991px) {
+    padding: 50px 0 20px;
+  }
+  @include max-screen(767px) {
+    padding: 15px 0;
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 30px;
+
+    &:nth-child(2) {
+      li {
+        &:first-child {
+          background-color: $color_2;
+        }
+
+        a {
+          background-color: $color_2;
+
+          &:hover {
+            background-color: #5bf9fb;
+            border: solid 6px #5bf9fb;
+          }
+        }
+      }
+    }
+
+    li {
+      line-height: 45px;
+      background-color: $color_1;
+      font-family: $ff_r;
+      font-size: 14px;
+      color: #8c9299;
+      border-bottom: solid 1px #ecf0f1;
+      border-left: solid 1px #ecf0f1;
+      border-right: solid 1px #ecf0f1;
+
+      &:first-of-type {
+        line-height: 73px;
+        background-color: #485460;
+        font-size: 26px;
+        font-family: $ff_r;
+        color: $color_1;
+      }
+
+      &:nth-child(2) {
+        line-height: 68px;
+        background-color: #f8f9fb;
+        font-family: $ff_r;
+        font-size: 20px;
+        color: #485460;
+
+      }
+
+
+      &:last-of-type {
+        font-family: $ff_r;
+        font-size: 14px;
+        color: #8c9299;
+        line-height: 46px;
+        padding: 15px 0;
+        background-color: #f8f9fb;
+
+
+      }
+
+      a {
+        display: inline-block;
+        padding: 0 50px;
+        font-family: $ff_s;
+        font-size: 17px;
+        color: $color_1;
+        background-color: #788492;
+        text-decoration: none;
+        border-radius: 3px;
+
+        &:hover {
+          background-color: #8585c7;
+          border: solid 4px #8585c7;
+        }
+      }
+    }
+  }
+}
+
+
 .contact {
-  padding: 113px 0 90px;
+  padding: 113px 0 100px;
   background-image: url("../images/test-small_02.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+  @include max-screen(991px) {
+    padding: 50px 0;
+  }
+  @include max-screen(767px) {
+    padding: 40px 0;
+  }
 
   h2 {
     text-align: center;
     font-family: $ff_r;
     font-size: 42px;
     color: $color_1;
+    margin-top: 0;
     margin-bottom: 115px;
+    @include max-screen(991px) {
+      margin-bottom: 70px;
+    }
+    @include max-screen(767px) {
+      margin-bottom: 50px;
+    }
   }
 
   h4 {
@@ -370,19 +472,23 @@ li {
     font-family: $ff;
     color: $color_1;
     font-size: 14px;
-    //line-height: 21px;
   }
-  h5{
+
+  h5 {
     color: #bface2;
     font-family: $ff_s;
     font-size: 14px;
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
   }
 
 }
 
 .contact_social {
   a {
-  margin: 30px 15px 23px 0;
+    margin: 30px 15px 23px 0;
     width: 43px;
     height: 43px;
     border-radius: 50%;
@@ -392,54 +498,78 @@ li {
     color: $color_1;
     text-decoration: none;
     line-height: 43px;
-  }
 
-  a:first-child {
-    background-color: #3b5997;
+    &:first-child {
+      background-color: #3b5997;
 
-    &:first-child:before {
-      content: "\f39e";
-      display: inline-block;
-      font-family: "Font Awesome 5 Brands", sans-serif;
+      &:first-child:before {
+        content: "\f39e";
+        display: inline-block;
+        font-family: "Font Awesome 5 Brands", sans-serif;
+      }
     }
 
-  }
+    &:nth-child(2) {
+      background-color: #3ec2f3;
 
-  a:nth-child(2) {
-    background-color: #3ec2f3;
-
-    &:nth-child(2):before {
-      content: "\f099";
-      display: inline-block;
-      font-family: "Font Awesome 5 Brands", sans-serif;
+      &:nth-child(2):before {
+        content: "\f099";
+        display: inline-block;
+        font-family: "Font Awesome 5 Brands", sans-serif;
+      }
     }
-  }
 
-  a:last-child {
-    background-color: #e44c41;
+    &:last-child {
+      background-color: #e44c41;
 
-    &:last-child:before {
-
-      content: "\f0d5";
-      display: inline-block;
-      font-family: "Font Awesome 5 Brands", sans-serif;
-
-
+      &:last-child:before {
+        content: "\f0d5";
+        display: inline-block;
+        font-family: "Font Awesome 5 Brands", sans-serif;
+      }
     }
   }
 }
 
+.btn-default {
+  border: none;
+  background-image: none;
+  width: 100%;
+  background-color: $color_2;
+  color: $color_1;
+  box-shadow: none;
+  font-size: 22px;
+  font-family: $ff_r;
 
+}
 
-//input{
-//  border: none;
-//  border-radius: 2px;
-//  padding: 15px 0 15px 15px;
-//  width: 270px;
-//  height: 45px;
-//  margin-bottom: 30px;
-//}
-//textarea{
-//  max-width: 568px;
-//  height: 169px;
-//}
+.form-group {
+  margin-bottom: 35px;
+  @include max-screen(767px) {
+    margin-bottom: 15px;
+  }
+
+}
+
+textarea.form-control {
+  height: 180px;
+  @include max-screen(767px) {
+    height: 90px;
+  }
+}
+
+.form-control {
+  border: none;
+  outline: none;
+  box-shadow: none !important;
+
+}
+
+button:active, button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}

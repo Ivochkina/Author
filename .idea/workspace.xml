@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d6d6bd6-bc5a-459e-bc94-8d2e3ad1ea94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/hover.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/.sass-cache/af1a042a93b62810b0496cabf56fe22dc8bc1b31/style_prepros.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/css/.sass-cache/af1a042a93b62810b0496cabf56fe22dc8bc1b31/style_prepros.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style_prepros.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style_prepros.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style_prepros.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style_prepros.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style_prepros.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/style_prepros.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/css" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
   </component>
   <component name="RecentsManager">
@@ -63,12 +68,24 @@
       <updated>1589574526886</updated>
       <workItem from="1589574528392" duration="2957000" />
       <workItem from="1589620263142" duration="56067000" />
-      <workItem from="1589927159311" duration="1070000" />
+      <workItem from="1589927159311" duration="30100000" />
     </task>
+    <task id="LOCAL-00001" summary="comit">
+      <created>1589929484720</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589929484720</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="comit" />
+    <option name="LAST_COMMIT_MESSAGE" value="comit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="518" y="222" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589627795936">
@@ -79,14 +96,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1589899950047" />
+    <state x="406" y="11" key="CommitChangelistDialog2" timestamp="1589929483229">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="406" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589929483229" />
     <state x="410" y="212" key="EditFileWatcherDialog" timestamp="1589574878291">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="410" y="212" key="EditFileWatcherDialog/0.0.1536.824@0.0.1536.824" timestamp="1589574878291" />
-    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1589921190867">
+    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1590022517097">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589921190867" />
+    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590022517097" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1589929489258">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589929489258" />
     <state x="408" y="30" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589913163113">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
